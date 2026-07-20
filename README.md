@@ -1,6 +1,6 @@
 # Vice Website
 
-Marketing site for [Vice](https://github.com/eklonofficial/Vice), instant-replay game clipping for Linux.
+Site for [Vice](https://github.com/eklonofficial/Vice), instant-replay game clipping for Linux.
 
 Live at: https://eklonofficial.github.io/Vice-Website/
 
