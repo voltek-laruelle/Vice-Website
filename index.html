@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Vice is instant-replay game clipping for Linux. Save the last 20 seconds with one key, then edit and share without leaving the app."
+      content="Vice is a free game clipper for Linux that shares Clips as links which play in Discord, with no upload wait or Vice file-size limit."
     />
     <meta
       name="keywords"
@@ -13,17 +13,17 @@
     />
     <meta name="author" content="Andrew Marin" />
     <meta name="google-site-verification" content="2uVqNOBrF1jOx2E_6ZgswhSiiT6OY4UWrUbRs5JzWJc" />
-    <meta name="theme-color" content="#0a1118" />
-    <title>Vice | Instant-replay game clipping for Linux</title>
+    <meta name="theme-color" content="#030609" />
+    <title>Vice | Linux game Clips with free link sharing</title>
     <link rel="canonical" href="https://eklonofficial.github.io/Vice-Website/" />
     <link rel="icon" href="assets/brand/vice-icon.svg" type="image/svg+xml" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Vice" />
-    <meta property="og:title" content="Vice | Instant replay for Linux" />
+    <meta property="og:title" content="Vice | Linux game Clips with free link sharing" />
     <meta
       property="og:description"
-      content="Save Clips, record Sessions, edit, organize into Playlists, and share through Discord-ready links. Free and open source."
+      content="Press F9 to save a Clip, copy its free public link, and paste it in Discord. It plays there without an upload or Vice file-size limit."
     />
     <meta property="og:url" content="https://eklonofficial.github.io/Vice-Website/" />
     <meta property="og:image" content="https://eklonofficial.github.io/Vice-Website/assets/screenshots/home.png" />
@@ -31,10 +31,10 @@
     <meta property="og:image:height" content="974" />
     <meta property="og:image:alt" content="The Vice clip library and capture controls" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Vice | Instant replay for Linux" />
+    <meta name="twitter:title" content="Vice | Linux game Clips with free link sharing" />
     <meta
       name="twitter:description"
-      content="Save the last 20 seconds of gameplay with one key, then edit, organize, or share the Clip."
+      content="Save a Clip on Linux, copy its free public link, and paste it in Discord. No upload wait and no Vice file-size limit."
     />
     <meta name="twitter:image" content="https://eklonofficial.github.io/Vice-Website/assets/screenshots/home.png" />
 
@@ -43,7 +43,7 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Vice",
-        "description": "Free, open-source instant-replay game clipping for Linux with Clips, Sessions, Playlists, built-in editing, and public sharing links.",
+        "description": "A free game clipper for Linux that saves Clips and shares them through public links which play in Discord without uploading the file.",
         "url": "https://eklonofficial.github.io/Vice-Website/",
         "downloadUrl": "https://github.com/eklonofficial/Vice#install",
         "operatingSystem": "Linux",
@@ -94,10 +94,10 @@
     <main id="main-content">
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="page-width hero-copy">
-          <p class="eyebrow"><span aria-hidden="true"></span>Instant replay for Linux</p>
-          <h1 id="hero-title">Save the last 20 seconds.<br />Keep playing.</h1>
+          <p class="eyebrow"><span aria-hidden="true"></span>Free game clipper for Linux</p>
+          <h1 id="hero-title">Game Clips that play from a link in Discord.</h1>
           <p class="hero-body">
-            Vice runs quietly in the background with typical CPU use under one percent. Press F9 for a Clip, double-tap for a Session, then trim, edit, organize, or share it from the same app.
+            Press F9 to save the last 20 seconds, then copy the free public link and paste it in Discord. The Clip plays there with no upload wait and no Vice file-size limit.
           </p>
 
           <div class="hero-actions">
@@ -109,7 +109,7 @@
             >
               Install Vice
             </a>
-            <a class="button button-outlined button-large" href="#inside-vice">See the app</a>
+            <a class="button button-outlined button-large" href="#features">See how sharing works</a>
           </div>
 
           <div class="install-command" aria-label="Arch Linux install command">
@@ -131,16 +131,16 @@
           <div
             class="save-demo"
             role="img"
-            aria-label="Press F9 to save the last 20 seconds as a Clip"
+            aria-label="Press F9 to save the last 20 seconds and share the Clip through a link that plays in Discord"
           >
             <kbd>F9</kbd>
             <div class="save-demo-copy">
               <strong>Clip saved</strong>
-              <span>Last 20 seconds</span>
+              <span>Link ready to copy</span>
             </div>
             <div class="save-demo-buffer" aria-hidden="true">
               <i></i>
-              <span>Buffer ready</span>
+              <span>Plays in Discord</span>
             </div>
           </div>
           <div class="media-crop hero-media-crop">
@@ -150,8 +150,8 @@
             />
           </div>
           <figcaption>
-            <strong>Vice home</strong>
-            <span>Recent Clips, Playlists, capture controls, and sharing in one place.</span>
+            <strong>Press F9, then copy the link</strong>
+            <span>Paste it in Discord and the Clip plays there.</span>
           </figcaption>
         </figure>
       </section>
@@ -160,30 +160,30 @@
         <div class="page-width">
           <header class="section-heading workflow-heading">
             <p class="eyebrow"><span aria-hidden="true"></span>How it works</p>
-            <h2 id="workflow-title">Vice runs in the background until you need it.</h2>
-            <p>No scene setup and no recording window to keep open.</p>
+            <h2 id="workflow-title">Play normally. Press F9 when something happens.</h2>
+            <p>Vice starts at login and keeps the last 20 seconds ready. You do not have to start recording first.</p>
           </header>
 
           <ol class="workflow-list">
             <li>
               <span class="step-number">01</span>
               <div>
-                <h3>Keep the buffer</h3>
-                <p>The Vice service starts at login and keeps a rolling buffer while you play.</p>
+                <h3>Vice keeps 20 seconds ready</h3>
+                <p>It runs in the background while you play, usually using less than one percent of your CPU.</p>
               </div>
             </li>
             <li>
               <span class="step-number">02</span>
               <div>
-                <h3>Save a Clip or start a Session</h3>
-                <p>Press F9 for the last 20 seconds. Double-tap to record a full Session.</p>
+                <h3>Press F9</h3>
+                <p>One press saves a Clip. Double-tap F9 to start a full Session.</p>
               </div>
             </li>
             <li>
               <span class="step-number">03</span>
               <div>
-                <h3>Use the result</h3>
-                <p>Trim or edit it, move it to a Playlist, or share it with a public link.</p>
+                <h3>Use the Clip</h3>
+                <p>Trim or edit it, add it to a Playlist, or copy a public link and send it.</p>
               </div>
             </li>
           </ol>
@@ -193,33 +193,33 @@
       <section class="feature-section" id="features" aria-labelledby="features-title">
         <div class="page-width">
           <header class="section-heading feature-heading">
-            <p class="eyebrow"><span aria-hidden="true"></span>What Vice includes</p>
-            <h2 id="features-title">The useful parts are built in.</h2>
-            <p>Vice covers capture, editing, sharing, and organization without an account or subscription.</p>
+            <p class="eyebrow"><span aria-hidden="true"></span>Why use Vice?</p>
+            <h2 id="features-title">Send a Discord link instead of a video file.</h2>
+            <p>The Clip plays in Discord without an upload. Vice also handles recording, editing, and organization.</p>
           </header>
 
           <div class="feature-list">
             <article class="feature-row feature-row-highlight">
               <header>
-                <p class="feature-label">Clip sharing</p>
-                <h3>Share Clips without uploading them.</h3>
+                <p class="feature-label">Free, unlimited sharing</p>
+                <h3>Paste a link. The Clip plays in Discord.</h3>
               </header>
               <p>
-                Vice creates a free public link directly from your machine. There is no Vice file-size limit or upload queue, and the link plays as an embed in Discord.
+                Vice shares the Clip directly from your computer. There is no upload, no Vice file-size limit, and no waiting for the file to finish sending.
               </p>
               <div class="feature-fact">
                 <strong>No upload</strong>
-                <span>Copy the link and send it.</span>
+                <span>No quota or file-size limit.</span>
               </div>
             </article>
 
             <article class="feature-row">
               <header>
-                <p class="feature-label">Capture performance</p>
-                <h3>Capture with negligible overhead.</h3>
+                <p class="feature-label">Performance</p>
+                <h3>Leave Vice running while you play.</h3>
               </header>
               <p>
-                Vice uses gpu-screen-recorder to capture through NVENC or VAAPI on NVIDIA, AMD, and Intel instead of continuously compositing a scene.
+                Typical CPU use is below one percent. Vice records through gpu-screen-recorder with NVENC or VAAPI on NVIDIA, AMD, and Intel.
               </p>
               <div class="feature-fact">
                 <strong>&lt;1%</strong>
@@ -229,11 +229,11 @@
 
             <article class="feature-row">
               <header>
-                <p class="feature-label">Trimmer and editor</p>
-                <h3>Finish the Clip inside Vice.</h3>
+                <p class="feature-label">Editing</p>
+                <h3>Trim and edit Clips in Vice.</h3>
               </header>
               <p>
-                Trim a Clip without re-encoding it, or use the multi-track editor for video, audio, text, and transitions.
+                The trimmer cuts a Clip without re-encoding it. The multi-track editor handles video, audio, text, and transitions.
               </p>
               <div class="feature-fact">
                 <strong>Built in</strong>
@@ -243,25 +243,25 @@
 
             <article class="feature-row">
               <header>
-                <p class="feature-label">Game context</p>
-                <h3>Let Vice handle the organization.</h3>
+                <p class="feature-label">Game detection</p>
+                <h3>Vice sorts Clips by game for you.</h3>
               </header>
               <p>
-                Vice detects known games, tags Clip filenames, files them into matching Playlists, and shows the active game through Discord Rich Presence.
+                Vice detects known games, tags Clip filenames, adds them to matching Playlists, and updates your Discord Rich Presence.
               </p>
               <div class="feature-fact">
                 <strong>Automatic</strong>
-                <span>Tags, Playlists, and presence.</span>
+                <span>Game tags, Playlists, and Rich Presence.</span>
               </div>
             </article>
 
             <article class="feature-row">
               <header>
-                <p class="feature-label">Ownership</p>
-                <h3>Use it without an account.</h3>
+                <p class="feature-label">Free and open source</p>
+                <h3>No account, subscription, or telemetry.</h3>
               </header>
               <p>
-                Vice is free, open source, and licensed under GPL-3.0. It has no subscription and no telemetry.
+                Vice is licensed under GPL-3.0. You can install it, use every feature, and read the source without creating an account.
               </p>
               <div class="feature-fact">
                 <a href="https://github.com/eklonofficial/Vice" target="_blank" rel="noreferrer">Read the source</a>
@@ -275,8 +275,8 @@
         <div class="page-width">
           <header class="section-heading product-heading">
             <p class="eyebrow"><span aria-hidden="true"></span>Inside Vice</p>
-            <h2 id="product-title">From Clip library to finished edit.</h2>
-            <p>Recent Clips, automatic Playlists, lossless trimming, and a multi-track editor stay close together.</p>
+            <h2 id="product-title">Everything you save is in one place.</h2>
+            <p>Open a Clip, trim it, make a full edit, move it to a Playlist, or copy its sharing link.</p>
           </header>
 
           <figure class="product-frame product-frame-wide">
@@ -288,7 +288,7 @@
               />
             </div>
             <figcaption>
-              <strong>Multi-track editor</strong>
+                <strong>Editor</strong>
               <span>Video, audio, text, and transitions</span>
             </figcaption>
           </figure>
@@ -317,8 +317,8 @@
                 />
               </div>
               <figcaption>
-                <strong>Capture controls</strong>
-                <span>Useful defaults with detailed control when needed</span>
+                <strong>Settings</strong>
+                <span>Buffer length, frame rate, encoder, audio, and more</span>
               </figcaption>
             </figure>
           </div>
@@ -328,8 +328,8 @@
       <section class="install-section" aria-labelledby="install-title">
         <div class="page-width install-layout">
           <div>
-            <p class="eyebrow"><span aria-hidden="true"></span>Ready at login</p>
-            <h2 id="install-title">Install Vice and press F9 in a game.</h2>
+            <p class="eyebrow"><span aria-hidden="true"></span>Get Vice</p>
+            <h2 id="install-title">Install Vice, start a game, and press F9.</h2>
           </div>
           <div class="install-actions">
             <a
@@ -352,7 +352,7 @@
           <span class="brand-mark" aria-hidden="true"><span></span></span>
           <span class="brand-word">VICE</span>
         </a>
-        <p>Instant-replay game clipping for Linux.</p>
+        <p>Free game clipping for Linux.</p>
         <div class="footer-links">
           <a href="https://github.com/eklonofficial/Vice" target="_blank" rel="noreferrer">GitHub</a>
           <a href="https://github.com/eklonofficial/Vice/blob/main/LICENSE" target="_blank" rel="noreferrer">GPL-3.0</a>
