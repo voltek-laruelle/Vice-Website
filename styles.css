@@ -369,25 +369,34 @@ figure {
   line-height: 1.02;
 }
 
-.platform-word {
+.platform-window {
   display: inline-block;
-  color: var(--md-sys-color-primary);
-  transform-origin: left center;
-  transition:
-    opacity var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized-accelerate),
-    transform var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized-accelerate);
+  overflow: hidden;
+  width: 4.65em;
+  height: 1.02em;
+  vertical-align: bottom;
 }
 
-.platform-word.is-exiting {
-  opacity: 0;
-  transform: translateY(-0.22em) scaleX(0.82) scaleY(0.92);
+.platform-track {
+  display: block;
+  transform: translateY(calc(var(--platform-index, 0) * -1.02em));
+  transition: transform 500ms var(--md-sys-motion-easing-emphasized);
 }
 
-.platform-word.is-entering {
-  opacity: 0;
-  transform: translateY(0.24em) scaleX(1.12) scaleY(1.04);
-  transition-timing-function: var(--md-sys-motion-easing-emphasized-decelerate);
-  transition-duration: var(--md-sys-motion-duration-medium);
+.platform-track.no-transition {
+  transition: none;
+}
+
+.platform-line {
+  display: block;
+  height: 1.02em;
+  color: var(--md-sys-color-tertiary);
+  line-height: 1.02;
+  white-space: nowrap;
+}
+
+.platform-period {
+  color: var(--md-sys-color-on-surface);
 }
 
 .hero-body {

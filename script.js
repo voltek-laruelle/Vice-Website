@@ -34,13 +34,13 @@ document.querySelectorAll("[data-copy-button]").forEach((button) => {
   });
 });
 
-const platformWord = document.querySelector("[data-platform-word]");
-const platformNames = ["Discord", "Steam", "Telegram", "Slack"];
+const platformTrack = document.querySelector("[data-platform-track]");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-if (platformWord && !reducedMotion.matches) {
+if (platformTrack && !reducedMotion.matches) {
   let platformIndex = 0;
   let platformTimer;
+  const platformCount = platformTrack.children.length - 1;
 
   const schedulePlatformChange = () => {
     window.clearTimeout(platformTimer);
@@ -48,22 +48,24 @@ if (platformWord && !reducedMotion.matches) {
   };
 
   const changePlatform = () => {
-    platformWord.classList.add("is-exiting");
-
-    window.setTimeout(() => {
-      platformIndex = (platformIndex + 1) % platformNames.length;
-      platformWord.textContent = platformNames[platformIndex];
-      platformWord.classList.remove("is-exiting");
-      platformWord.classList.add("is-entering");
-
-      window.requestAnimationFrame(() => {
-        window.requestAnimationFrame(() => {
-          platformWord.classList.remove("is-entering");
-          schedulePlatformChange();
-        });
-      });
-    }, 200);
+    platformIndex += 1;
+    platformTrack.style.setProperty("--platform-index", platformIndex);
+    schedulePlatformChange();
   };
+
+  platformTrack.addEventListener("transitionend", (event) => {
+    if (event.propertyName !== "transform" || platformIndex !== platformCount) {
+      return;
+    }
+
+    platformTrack.classList.add("no-transition");
+    platformIndex = 0;
+    platformTrack.style.setProperty("--platform-index", platformIndex);
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => platformTrack.classList.remove("no-transition"));
+    });
+  });
 
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
