@@ -61,7 +61,7 @@
         }
       }
     </script>
-    <link rel="stylesheet" href="styles.css?v=20260821-3" />
+    <link rel="stylesheet" href="styles.css?v=20260821-4" />
     <script src="script.js?v=20260821-1" defer></script>
   </head>
   <body>
@@ -125,15 +125,29 @@
             <a class="button button-outlined button-large" href="#features">See how sharing works</a>
           </div>
 
-          <div class="install-command" aria-label="Arch Linux install command">
-            <span class="command-label">Arch Linux</span>
+          <div class="install-command" aria-label="Arch-based install command">
+            <span class="command-label">Arch-based:</span>
             <code>yay -S vice-clipper</code>
             <button
               class="copy-button"
               type="button"
               data-copy-button
               data-command="yay -S vice-clipper"
-              aria-label="Copy install command"
+              aria-label="Copy Arch-based install command"
+            >
+              <span data-copy-label aria-live="polite">Copy</span>
+            </button>
+          </div>
+
+          <div class="install-command install-command-other" aria-label="Other distros install command">
+            <span class="command-label">Other distros:</span>
+            <code>git clone https://github.com/eklonofficial/Vice &amp;&amp; cd Vice &amp;&amp; ./install.sh</code>
+            <button
+              class="copy-button"
+              type="button"
+              data-copy-button
+              data-command="git clone https://github.com/eklonofficial/Vice &amp;&amp; cd Vice &amp;&amp; ./install.sh"
+              aria-label="Copy other distros install command"
             >
               <span data-copy-label aria-live="polite">Copy</span>
             </button>

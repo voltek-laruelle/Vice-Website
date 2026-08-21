@@ -441,7 +441,7 @@ figure {
 
 .install-command {
   display: grid;
-  width: min(100%, 520px);
+  width: min(100%, 760px);
   min-height: 56px;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -466,6 +466,11 @@ figure {
   font-weight: 600;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.install-command-other code {
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 
 .copy-button {
