@@ -373,13 +373,13 @@ figure {
   display: inline-block;
   overflow: hidden;
   width: 4.65em;
-  height: 1.02em;
+  height: 1.16em;
   vertical-align: bottom;
 }
 
 .platform-track {
   display: block;
-  transform: translateY(calc(var(--platform-index, 0) * -1.02em));
+  transform: translateY(calc(var(--platform-index, 0) * -1.16em));
   transition: transform 500ms var(--md-sys-motion-easing-emphasized);
 }
 
@@ -389,9 +389,9 @@ figure {
 
 .platform-line {
   display: block;
-  height: 1.02em;
+  height: 1.16em;
   color: var(--md-sys-color-tertiary);
-  line-height: 1.02;
+  line-height: 1.16;
   white-space: nowrap;
 }
 
