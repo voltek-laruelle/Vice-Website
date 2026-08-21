@@ -369,6 +369,27 @@ figure {
   line-height: 1.02;
 }
 
+.platform-word {
+  display: inline-block;
+  color: var(--md-sys-color-primary);
+  transform-origin: left center;
+  transition:
+    opacity var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized-accelerate),
+    transform var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized-accelerate);
+}
+
+.platform-word.is-exiting {
+  opacity: 0;
+  transform: translateY(-0.22em) scaleX(0.82) scaleY(0.92);
+}
+
+.platform-word.is-entering {
+  opacity: 0;
+  transform: translateY(0.24em) scaleX(1.12) scaleY(1.04);
+  transition-timing-function: var(--md-sys-motion-easing-emphasized-decelerate);
+  transition-duration: var(--md-sys-motion-duration-medium);
+}
+
 .hero-body {
   max-width: 680px;
   margin-bottom: 0;

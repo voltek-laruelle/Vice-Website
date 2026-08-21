@@ -33,3 +33,46 @@ document.querySelectorAll("[data-copy-button]").forEach((button) => {
     }, 1800);
   });
 });
+
+const platformWord = document.querySelector("[data-platform-word]");
+const platformNames = ["Discord", "Steam", "Telegram", "Slack"];
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+if (platformWord && !reducedMotion.matches) {
+  let platformIndex = 0;
+  let platformTimer;
+
+  const schedulePlatformChange = () => {
+    window.clearTimeout(platformTimer);
+    platformTimer = window.setTimeout(changePlatform, 2600);
+  };
+
+  const changePlatform = () => {
+    platformWord.classList.add("is-exiting");
+
+    window.setTimeout(() => {
+      platformIndex = (platformIndex + 1) % platformNames.length;
+      platformWord.textContent = platformNames[platformIndex];
+      platformWord.classList.remove("is-exiting");
+      platformWord.classList.add("is-entering");
+
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
+          platformWord.classList.remove("is-entering");
+          schedulePlatformChange();
+        });
+      });
+    }, 200);
+  };
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      window.clearTimeout(platformTimer);
+      return;
+    }
+
+    schedulePlatformChange();
+  });
+
+  schedulePlatformChange();
+}
