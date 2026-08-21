@@ -22,12 +22,14 @@ document.querySelectorAll("[data-copy-button]").forEach((button) => {
     try {
       await copyText(button.dataset.command);
       label.textContent = "Copied";
+      button.classList.add("is-copied");
     } catch {
       label.textContent = "Copy failed";
     }
 
     window.setTimeout(() => {
       label.textContent = "Copy";
+      button.classList.remove("is-copied");
     }, 1800);
   });
 });
