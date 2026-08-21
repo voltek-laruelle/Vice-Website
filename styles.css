@@ -375,6 +375,7 @@ figure {
   width: 4.65em;
   height: 1.16em;
   vertical-align: bottom;
+  transform: translateY(0.04em);
 }
 
 .platform-track {
