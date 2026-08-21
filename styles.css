@@ -443,7 +443,7 @@ figure {
   display: grid;
   width: min(100%, 760px);
   min-height: 56px;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 80px minmax(0, 1fr) auto;
   align-items: center;
   gap: 16px;
   margin-top: 16px;
